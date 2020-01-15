@@ -7,7 +7,7 @@ set -euxo pipefail
 git rm -rf src/diffblue-test/java || true
 
 # Regenerate tests
-/cover-ui/dcover create io.diffblue.corebanking --test-sources-root src/diffblue-test/java -cp target/classes
+/cover-ui/dcover create io.diffblue.corebanking --test-output-dir src/diffblue-test/java -cp target/classes
 
 # Add tests back to git and push
 BRANCH="diffblue/${BRANCH_NAME:-tests}"
