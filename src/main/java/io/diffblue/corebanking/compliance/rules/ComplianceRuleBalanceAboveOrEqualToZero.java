@@ -15,7 +15,7 @@ public class ComplianceRuleBalanceAboveOrEqualToZero extends ComplianceRule {
     this.removeFromComplianceLists(account);
 
     // Check if this account passes or fails this rule.
-    if (account.getCurrentBalance() >= 0) {
+    if (account.getCurrentBalance() > 0) {
       addToCompliantAccounts(account);
     } else {
       addToNonCompliantAccounts(account);
